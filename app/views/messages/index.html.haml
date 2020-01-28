@@ -1,0 +1,10 @@
+.wrapper
+  %video{:autoplay => "", :loop => "", :muted => "", :src => "https://assets.mixkit.co/videos/2445/2445-1080.mp4"}
+  .overlay
+    .header
+      = render "header"
+    .main
+      = render "side_bar"
+      .user_bar
+        - @messages.each do |message|
+          = render partial: "user_bar", locals: { message: message }

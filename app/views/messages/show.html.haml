@@ -1,0 +1,35 @@
+.details
+  %video{:autoplay => "", :loop => "", :muted => "", :src => "https://assets.mixkit.co/videos/2445/2445-1080.mp4"}
+  .overlay
+    .details__inner.clearfix
+      .card.border-danger.mb-3
+        .card-header.bg-transparent.border-danger 
+          = @message.category.meal_category
+        .card-body.text-dark
+          %h5.card-image
+            = image_tag(@message.image, size: 200) if @message.image.present?
+          %p.card-text 
+            = simple_format(@message.text)
+        .card-footer.bg-transparent.border-danger
+          = @message.user.name
+      .comment-detail
+        %h4 
+          コメント一覧
+        .comments
+          - if @comments
+            - @comments.each do |comment|
+              %p
+                %strong
+                  = comment.user.name + "："
+                = comment.text
+        .comment-form
+          - if current_user
+            = form_with(model: [@message, @comment], local: true) do |form|
+              = form.text_area :text, placeholder: " コメントする", rows: "2", class: "comment-text"
+              = form.submit "SEND", class: 'btn-send-comment'
+          - else
+            %strong
+              %p 
+                ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+        %a.btn{:href => "/"} 
+          トップページに戻る

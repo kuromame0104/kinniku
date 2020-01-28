@@ -1,0 +1,26 @@
+.col-xs-4
+  .card.border-danger.mb-3{:style => "max-width: 18rem;"}
+    .card-header.bg-transparent.border-danger 
+      = message.category.meal_category
+    = link_to  "/messages/#{message.id}" do
+      .card-body.text-dark
+        - if message.text.present?
+          %h5.card-image
+            = image_tag(message.image, :size =>'170x150') if message.image.present?
+          %p.card-text 
+            = simple_format(message.text)
+    .card-footer.bg-transparent.border-danger
+      = message.user.name
+      %ul.icons
+        - if user_signed_in? && current_user.id == message.user.id
+          = link_to edit_message_path(message.id), class:"btn--edit" do
+            = icon('far', 'edit', class: "icons__btn")
+          = link_to "/messages/#{message.id}", method: :delete, class:"btn--delete" do
+            = icon('fas', 'trash-alt', class: "icons__btn")
+
+
+
+
+
+
+

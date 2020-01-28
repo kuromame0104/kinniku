@@ -1,0 +1,13 @@
+.contents
+  %video{:autoplay => "", :loop => "", :muted => "", :src => "https://assets.mixkit.co/videos/2445/2445-1080.mp4"}
+  .overlay
+    .container__inner.clearfix
+      = form_with(model: @message, local: true) do |form|
+        %h3
+          今何食べたい？
+        = form.collection_select :category_id, Category.all, :id, :meal_category, {class: "select"}
+        = form.text_field :image, placeholder: "Image Url", class: 'photo'
+        = form.text_area :text, placeholder: "text" , rows: "10" , class: 'text'
+        = form.submit "SEND" , class: 'btn-send'
+        %a.btn{:href => "/"} 
+          トップページに戻る

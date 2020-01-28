@@ -1,0 +1,454 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: url(https://assets.mixkit.co/videos/2445/2445-1080.mp4) no-repeat center center/cover;
+}
+video {
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 1;
+}
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+  background-size: 4px 4px;
+  z-index: 2;
+}
+
+  .main {
+    display: flex;
+    height: calc(100vh - 60px);
+    width: 100vw;
+  }
+
+  @import url(https://fonts.googleapis.com/css?family=Bangers);
+  @import url(https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300);
+  @import url(https://fonts.googleapis.com/css?family=Vollkorn);
+
+
+  .header {
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    font-family: 'Bangers', cursive;
+    .header-contents {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      width: 100vw;
+      // margin: 5px 0px 0px 0px;
+      text-align: center;
+      line-height: 50px;
+      .contents-left {
+        display: flex;
+        height: 50px;
+        width: 270px;
+        align-items: center;
+        margin-top: 8px;
+        .left-items {
+          display: flex;
+          font-size: 15px;
+          margin: 0 auto;
+          align-items: center;
+          &__title {
+            text-decoration: none;
+            color: white;
+            background-color: brown;
+            width: 160px;
+            height: 50px;
+          }
+          &__form {
+            background-color: cornflowerblue;
+            color:white;
+            width: 110px;
+            height: 50px;
+          }
+          .btn{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+          }
+          .btn:hover{
+            letter-spacing: 3px;
+          }
+        }
+      }
+      .contents-right {
+        display: flex;
+        text-align: center;
+        width: 355px;
+        height: 50px;
+        margin-top: 8px;
+        .right-items {
+          display: flex;
+          font-size: 15px;
+          margin-right: 20px;
+          align-items: center;
+          img {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            border-radius: 50px;
+            margin-right: 5px;
+          }
+          &__mypage {
+            width: 180px;
+            height: 50px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+          }
+          &__out {
+            width: 125px;
+            height: 50px;
+            background-color: crimson;
+            color: white;
+            text-decoration: none;
+          }
+          .btn{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+          }
+          .btn:hover{
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  .user_bar {
+    width: 1000px;
+    margin-top: 30px;
+    margin-left: 80px;
+    overflow: scroll;
+    .card.border-danger.mb-3 {
+      float: left;
+      border-radius: 18px;
+      border-width: 4px;
+      color: black;
+      margin-right:20px;
+      margin-bottom:20px;
+      width:300px;
+      height: 350px;
+      .card-header.bg-transparent.border-danger {
+        border-width: 2px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Bangers', cursive;
+        height: 50px;
+      }
+      .card-body.text-dark {
+        font-size: 15px;
+        height: 250px;
+        h5 {
+          text-align: center;
+        }
+      }
+      .card-footer.bg-transparent.border-danger {
+        border-width: 2px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        padding-top: 9px;
+        font-weight: bold;
+        font-family: 'Bangers', cursive;
+        ul {
+          margin-bottom: 0px;
+          // text-decoration: none;
+          // color: black;
+          .icons__btn {
+            font-weight: bold;
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+    a, a:visited, a:focus, a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .side-bar {
+    height: calc(100vh - 60px);
+    width: calc(100vw - 1000px);
+    .top {
+    display: flex;
+    justify-content: space-between;
+      .trim-image-to-circle01 {
+        background-image: url("https://d1f5hsy4d47upe.cloudfront.net/ba/ba655071d5d697d756f30480a7dc54c5_t.jpeg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        margin-left: 20px;
+        border: 4px solid black;
+
+      }
+      .trim-image-to-circle01:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/baba96707dd7ab1be1cba65096fbf93d.png&name=baba96707dd7ab1be1cba65096fbf93d.png");  /* 表示する画像 */
+      }
+      .trim-image-to-circle02 {
+        background-image: url("https://pro-foto.jp/free/img/images_big/yos0024-054.jpg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        border: 4px solid black;
+      }
+      .trim-image-to-circle02:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/b58c16a85f676156ad885dee2dc65efb.png&name=b58c16a85f676156ad885dee2dc65efb.png");  /* 表示する画像 */
+      }
+    }
+    .middle{
+      display: flex;
+      justify-content: space-between;
+      .trim-image-to-circle03 {
+        background-image: url("https://d1f5hsy4d47upe.cloudfront.net/76/769864ab2321d9d2fd6b78985f82e612_t.jpeg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        margin-left: 20px;
+        border: 4px solid black;
+      }
+      .trim-image-to-circle03:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/af01790e18462f2fe289fe96f121c5d9.png&name=af01790e18462f2fe289fe96f121c5d9.png");  /* 表示する画像 */
+      }
+      .trim-image-to-circle04 {
+        background-image: url("https://d1f5hsy4d47upe.cloudfront.net/29/2957814d542011b580346a92cc201ad8_t.jpeg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        border: 4px solid black;
+      }
+      .trim-image-to-circle04:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/35752a7c35f68a83c11225e865eabe5a.png&name=35752a7c35f68a83c11225e865eabe5a.png");  /* 表示する画像 */
+      }
+    }
+    .bottom{
+      display: flex;
+      justify-content: space-between;
+      .trim-image-to-circle05 {
+        background-image: url("https://d1f5hsy4d47upe.cloudfront.net/9b/9bb028242f6d92b094dd705a84b88dec_t.jpeg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        margin-left: 20px;
+        border: 4px solid black;
+      }
+      .trim-image-to-circle05:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/8d5fe0ee8565344809e0ae0085c562b4.png&name=8d5fe0ee8565344809e0ae0085c562b4.png");  /* 表示する画像 */
+      }
+      .trim-image-to-circle06 {
+        background-image: url("https://img.freepik.com/free-photo/_124865-699.jpg?size=626&ext=jpg");  /* 表示する画像 */
+        width:  180px;       /* ※縦横を同値に */
+        height: 180px;       /* ※縦横を同値に */
+        border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+        background-position: center center;  /* 横長画像の左上を基準に表示 */
+        margin-top: 25px;
+        border: 4px solid black;
+      }
+      .trim-image-to-circle06:hover{
+        background-image: url("https://tool2.ysklog.net/download.php?url=https://uploda2.ysklog.net/c2b526ba3c9ce56bb7224eefe680162c.png&name=c2b526ba3c9ce56bb7224eefe680162c.png");  /* 表示する画像 */
+      }
+    }
+}
+
+.contents {
+  height: 100vh;
+  width: 100vw;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  background: url(https://assets.mixkit.co/videos/2445/2445-1080.mp4) no-repeat center center/cover;
+  video {
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: 1;
+  }
+  .overlay {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(45deg, rgba(0,0,0,.3) 50%, rgba(0,0,0,.7) 50%);
+    background-size: 4px 4px;
+    z-index: 2;
+  }
+
+  .container__inner {
+    width: 980px;
+    margin: 100px auto;
+    padding: 60px;
+    background-color: dimgray;
+    border: 5px solid black;
+    border-radius: 5px;
+    h3 {
+      margin-bottom: 10px;
+      margin-left: 315px;
+    }
+    h4 {
+      margin-bottom: 10px;
+      margin-left: 390px;
+    }
+    select {
+      font-family: 'Vollkorn', serif;
+      display: block;
+      width: 800px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .photo {
+      display: block;
+      width: 800px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .text {
+      display: block;
+      width: 800px;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+    .btn-send {
+      display: block;
+      width: 800px;
+      height: 50px;
+      margin-left: 20px;
+      color: #fff;
+      background-color: #38aef0;
+      border: none;
+      font-size: large;
+    }
+    a {
+      color: #fff;
+      background-color:gray;
+      border: none;
+      font-size: large;
+      width: 800px;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+}
+
+.details{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  overflow: hidden;
+  background: url(https://assets.mixkit.co/videos/2445/2445-1080.mp4) no-repeat center center/cover;
+  .details__inner {
+    width: 980px;
+    margin: 100px auto;
+    display: flex;
+    .card.border-danger.mb-3 {
+      border-radius: 18px;
+      border-width: 4px;
+      color: black;
+      width: 500px;
+      margin: 10px auto;
+      .card-header.bg-transparent.border-danger {
+        border-width: 2px;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: 'Bangers', cursive;
+      }
+      .card-body.text-dark {
+        font-size: 15px;
+        h5 {
+          text-align: center;
+        }
+      }
+      .card-footer.bg-transparent.border-danger {
+        border-width: 2px;
+        padding-top: 9px;
+        font-weight: bold;
+        font-family: 'Bangers', cursive;
+      }
+    }
+    .comment-detail {
+      width: calc(100vw - 500px);
+      height: 400px;
+      margin: 10px auto;
+      h4 {
+        color: ghostwhite;
+        font-family: 'Bangers', cursive;
+        font-weight: bold;
+        margin-left: 20px;
+      }
+      .comments {
+        display: block;
+        height: 250px;
+        margin: 10px auto;
+        margin-left: 20px;
+        color: slategray;
+        width: 600px;
+        overflow: scroll;
+        p {
+          padding-left: 10px;
+          background-color: snow;
+          display: block;
+          border-radius: 3px;
+          strong {
+            color: black;
+          }
+        }
+      }
+      .comment-form {
+        display: block;
+        height: 100px;
+        margin: 10px auto;
+        .comment-text {
+          width: 600px;
+          margin-left: 20px;
+          margin-top: 10px;
+        }
+        .btn-send-comment {
+          color: #fff;
+          background-color: #38aef0;
+          border: none;
+          font-size: large;
+          width: 600px;
+          margin-left: 20px;
+        }
+      }
+    }
+
+  }
+  a {
+    color: #fff;
+    background-color:gray;
+    border: none;
+    font-size: large;
+    width: 600px;
+    margin-left: 20px;
+  }
+}
