@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: foodshare_production
-  username: foodshare
+  username: root
   password: <%= ENV['foodshare_DATABASE_PASSWORD'] %>
