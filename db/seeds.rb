@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+# coding: utf-8
+Category.create(:meal_category => '和食')
+Category.create(:meal_category => '洋食')
+Category.create(:meal_category => '中華')
+Category.create(:meal_category => 'イタリアン・フレンチ')
+Category.create(:meal_category => 'アジア・エスニック')
+Category.create(:meal_category => 'カフェ・スイーツ')
