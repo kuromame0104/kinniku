@@ -2,15 +2,15 @@
   %video{:autoplay => "", :loop => "", :muted => "", :src => "https://assets.mixkit.co/videos/2445/2445-1080.mp4"}
   .overlay
     .details__inner.clearfix
-      .card.border-danger.mb-3
-        .card-header.bg-transparent.border-danger 
+      .card.border-dark.mb-3
+        .card-header.bg-transparent.border-dark
           = @message.category.meal_category
         .card-body.text-dark
           %h5.card-image
             = image_tag(@message.image, size: 200) if @message.image.present?
           %p.card-text 
             = simple_format(@message.text)
-        .card-footer.bg-transparent.border-danger
+        .card-footer.bg-transparent.border-dark
           = @message.user.name
       .comment-detail
         %h4 
