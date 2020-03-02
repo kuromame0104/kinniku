@@ -3,14 +3,14 @@
     .contents-left
       .left-items
         %p.left-items__title
-          = link_to "今何食べたい？", root_path, class: 'btn'
+          = link_to "FoodShare", root_path, class: 'btn'
         %p.left-items__form
           = link_to "新規投稿", new_message_path, class: 'btn'
     .contents-right
       .right-items
-        %p.right-items__icon
-          = image_tag(current_user.image, :size =>'50x50')
         %p.right-items__mypage
           = link_to current_user.name, edit_user_path(current_user), class: 'btn'
+        %p.right-items__icon
+          = image_tag(current_user.image, :size =>'50x50')
         %p.right-items__out
           = link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'

@@ -1,6 +1,6 @@
 .col-xs-4
-  .card.border-danger.mb-3{:style => "max-width: 18rem;"}
-    .card-header.bg-transparent.border-danger 
+  .card.border-dark.mb-3{:style => "max-width: 18rem;"}
+    .card-header.bg-transparent.border-dark 
       = message.category.meal_category
     = link_to  "/messages/#{message.id}" do
       .card-body.text-dark
@@ -9,7 +9,7 @@
             = image_tag(message.image, :size =>'170x150') if message.image.present?
           %p.card-text 
             = simple_format(message.text)
-    .card-footer.bg-transparent.border-danger
+    .card-footer.bg-transparent.border-dark
       = message.user.name
       %ul.icons
         - if user_signed_in? && current_user.id == message.user.id

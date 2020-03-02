@@ -1,0 +1,24 @@
+.wrapper
+  %video{:autoplay => "", :loop => "", :muted => "", :src => "https://assets.mixkit.co/videos/2445/2445-1080.mp4"}
+  .overlay
+    .toppage-Contents
+      .top-content
+        FoodShare
+      .middle-content
+        .text
+          .title 今何食べたい？でツナガル世界
+          Foodshare（フードシェア）は、
+          %br
+          今食べたいものを共有できる新感覚サービスです。
+          %br
+          今食べたくて仕方ないものがあるあなたも
+          %br
+          今日何食べようか迷っているあなたも
+          %br
+          めくるめく食の世界へ
+        .signBox
+          .signUpBox
+            = link_to "新規会員登録", " /users/sign_up", class:'sign-btn'
+          .signInBox
+            = link_to "ログイン", " /users/sign_in", class:'sign-btn'
+      .bottom-content
