@@ -15,13 +15,13 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(message_params)
-    redirect_to root_path
+    redirect_to messages_path
   end
 
   def destroy
     message = Message.find(params[:id])
     message.destroy
-    redirect_to root_path
+    redirect_to messages_path
   end
 
   def edit
@@ -31,7 +31,7 @@ class MessagesController < ApplicationController
   def update
     message = Message.find(params[:id])
     message.update(message_params)
-    redirect_to root_path
+    redirect_to messages_path
   end
 
   def show
