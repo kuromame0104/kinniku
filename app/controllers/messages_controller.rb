@@ -1,9 +1,13 @@
 class MessagesController < ApplicationController
   before_action :set_current_user
+  before_action :configure_permitted_parameters, if: :devise_controller?, except: [:toppage]
+
+  def toppage
+  end
+
   def index
     @messages = Message.all
     @messages = @messages.includes(:user).order("created_at DESC")
-    # @categories = Category.all
   end
 
   def new
@@ -45,5 +49,9 @@ class MessagesController < ApplicationController
 
   def set_current_user
     @current_user = User.find_by(id: session[:user_id])
+  end
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :image])
   end
 end
